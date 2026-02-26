@@ -15,10 +15,6 @@
     ~/AppData/Local/clangd: ls/clangd
     ~/Documents/PowerShell/Profile.ps1: pwsh/profile.ps1
     ~/AppData/Local/nvim: vim/nvim
-    ~/AppData/Roaming/Code/User/settings.json: vscode/settings.json
-    ~/AppData/Roaming/Code/User/keybindings.json: vscode/keybindings.json
-    ~/AppData/Roaming/Code/User/tasks.json: vscode/tasks.json
-    ~/.config/vscode/ext: vscode/ext
     ~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json: wt/settings.json
     ~/.bashrc: .bashrc
     ~/.czrc: .czrc

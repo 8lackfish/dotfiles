@@ -1,0 +1,16 @@
+[include]
+  path = ~/.gitconfig.local
+[alias]
+	status = !gst
+  root = rev-parse --show-toplevel
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[diff]
+  tool = nvimdiff
+[merge]
+  tool = nvimdiff
+[mergetool "nvimdiff"]
+  layout = "LOCAL,BASE,REMOTE / MERGED"

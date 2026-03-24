@@ -1,0 +1,3 @@
+.monaco-workbench .part.titlebar>.titlebar-container>.titlebar-left {
+  opacity: 0; /* hide logo (Linux, Windows) */
+}

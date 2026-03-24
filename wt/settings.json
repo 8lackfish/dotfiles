@@ -1,0 +1,125 @@
+{
+  "$help": "https://aka.ms/terminal-documentation",
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "actions": [
+    {
+      "command": {
+        "action": "copy",
+        "singleLine": false
+      },
+      "id": "copy"
+    },
+    {
+      "command": "paste",
+      "id": "paste"
+    },
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "auto",
+        "splitMode": "duplicate"
+      },
+      "id": "splitPane"
+    },
+    {
+      "command": "find",
+      "id": "find"
+    }
+  ],
+  "copyFormatting": "none",
+  "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+  "disableAnimations": true,
+  "disabledProfileSources": [
+    "Windows.Terminal.Azure",
+    "Windows.Terminal.Wsl"
+  ],
+  "initialCols": 94,
+  "initialPosition": "140,40",
+  "initialRows": 34,
+  "keybindings": [
+    {
+      "id": "Terminal.ScrollUp",
+      "keys": "ctrl+shift+k"
+    },
+    {
+      "id": "copy",
+      "keys": "ctrl+c"
+    },
+    {
+      "id": "paste",
+      "keys": "ctrl+v"
+    },
+    {
+      "id": "find",
+      "keys": "ctrl+shift+f"
+    },
+    {
+      "id": "Terminal.ScrollDown",
+      "keys": "ctrl+shift+j"
+    },
+    {
+      "id": "splitPane",
+      "keys": "alt+shift+d"
+    }
+  ],
+  "launchMode": "focus",
+  "profiles": {
+    "defaults": {
+      "colorScheme": "Solarized Dark (yz)",
+      "font": {
+        "cellHeight": "1.4",
+        "face": "PlemolJP Console NF"
+      },
+      "intenseTextStyle": "none",
+      "opacity": 68,
+      "padding": "2,0,2,0",
+      "scrollbarState": "hidden",
+      "useAcrylic": true
+    },
+    "list": [
+      {
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "hidden": true,
+        "name": "Command Prompt"
+      },
+      {
+        "adjustIndistinguishableColors": "never",
+        "commandline": "pwsh.exe -NoLogo",
+        "font": {
+          "builtinGlyphs": true
+        },
+        "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+        "name": "PowerShell",
+        "source": "Windows.Terminal.PowershellCore",
+        "tabTitle": "ps"
+      }
+    ]
+  },
+  "schemes": [
+    {
+      "background": "#031219",
+      "black": "#002B38",
+      "blue": "#20A477",
+      "brightBlack": "#47503E",
+      "brightBlue": "#707A83",
+      "brightCyan": "#648F90",
+      "brightGreen": "#72DC05",
+      "brightPurple": "#58ABBA",
+      "brightRed": "#B73721",
+      "brightWhite": "#B7C2B8",
+      "brightYellow": "#535C70",
+      "cursorColor": "#64BC78",
+      "cyan": "#2AA198",
+      "foreground": "#9EACA0",
+      "green": "#859900",
+      "name": "Solarized Dark (yz)",
+      "purple": "#C51B1A",
+      "red": "#D01B24",
+      "selectionBackground": "#002B38",
+      "white": "#9EACA0",
+      "yellow": "#A77807"
+    }
+  ],
+  "themes": [],
+  "useAcrylicInTabRow": true
+}

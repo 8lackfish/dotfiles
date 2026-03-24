@@ -1,0 +1,31 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean:
+    ~/:
+    ~/.config:
+      recursive: true
+
+- link:
+    ~/.config/kitty:
+    ~/.config/lazygit/config.yml: lazygit/config.yml
+    ~/.config/powershell: pwsh
+    ~/.config/tmux:
+    ~/.config/nvim:
+    ~/.config/Code/User/settings.json: vscode/settings.json
+    ~/.config/Code/User/keybindings.json: vscode/keybindings.json
+    ~/.config/Code/User/tasks.json: vscode/tasks.json
+    ~/.config/vscode:
+    ~/.config/zsh:
+    ~/.bash_profile: .bash_profile
+    ~/.bashrc: .bashrc
+    ~/.czrc: .czrc
+    ~/.fdignore: .fdignore
+    ~/.gitconfig: .gitconfig
+    ~/.zshenv: .zshenv
+    ~/.config/starship.toml:
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

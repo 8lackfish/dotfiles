@@ -6,6 +6,15 @@ vim.api.nvim_create_autocmd("FileType", {
   end
 })
 
+-- zoxide
+if vim.fn.executable("zoxide") == 1 then
+  vim.api.nvim_create_autocmd("DirChanged", {
+    callback = function()
+      vim.fn.system({ "zoxide", "add", vim.fn.getcwd() })
+    end,
+  })
+end
+
 -- opts
 vim.api.nvim_create_autocmd("BufRead", {
   callback = function()

@@ -85,6 +85,32 @@ if vim.fn.has('win32') == 1 then
   end, { silent = true })
 end
 
+-- Tmux
+if vim.env.TMUX then
+  -- exec Nnn in pane
+  vim.keymap.set("n", "<Leader>N", function()
+    vim.fn.system({
+      "tmux",
+      "split-window",
+      "-c", vim.fn.getcwd(),
+      "-e", "NVIM=" .. vim.v.servername,
+      "exec nnn"
+    })
+  end)
+
+  -- exec Nnn in horizontal pane
+  vim.keymap.set("n", "<Leader>n", function()
+    vim.fn.system({
+      "tmux",
+      "split-window",
+      "-h",
+      "-c", vim.fn.getcwd(),
+      "-e", "NVIM=" .. vim.v.servername,
+      "exec nnn"
+    })
+  end)
+end
+
 -- exit term mode
 vim.keymap.set("t", "<c-\\><c-[>", "<c-\\><c-n>")
 

@@ -16,7 +16,7 @@ return {
     render = function(props)
       local devicons = require 'nvim-web-devicons'
       local helpers = require 'incline.helpers'
-      local color = require 'util.color'
+      local color = require 'lum.color'
 
       -- ft_icon + filename
       local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ':t')

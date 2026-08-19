@@ -6,7 +6,7 @@ return {
   "nvim-lualine/lualine.nvim",
   event = "VeryLazy",
   opts = function()
-    local git = require 'util.git'
+    local git = require 'lum.git'
 
     vim.api.nvim_create_autocmd("BufEnter", {
       pattern = "*.*",

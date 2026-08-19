@@ -1,5 +1,5 @@
 local M = {}
-local color = require 'util.color'
+local color = require 'lum.color'
 
 local inspect_ns = vim.api.nvim_create_namespace("editor_color_codes_inspect")
 

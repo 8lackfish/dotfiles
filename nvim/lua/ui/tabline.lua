@@ -1,5 +1,5 @@
-local util = {}
-util.color = require 'util.color'
+local lum = {}
+lum.color = require 'lum.color'
 
 local default_bufline_opts = {
   sep = '',
@@ -114,9 +114,9 @@ local function bufline()
   -- sec_sep labels
   local ss_width = vim.fn.strdisplaywidth(sec_sep)
 
-  local unfocused_bg = util.color.hlcolor(hl, 'bg')
-  local focused_bg = util.color.hlcolor(hl_sel, 'bg')
-  local fill_bg = util.color.hlcolor(hl_fill, 'bg')
+  local unfocused_bg = lum.color.hlcolor(hl, 'bg')
+  local focused_bg = lum.color.hlcolor(hl_sel, 'bg')
+  local fill_bg = lum.color.hlcolor(hl_fill, 'bg')
   vim.api.nvim_set_hl(0, 'bufline_left_-_focused_ss', { fg = unfocused_bg, bg = focused_bg })
   vim.api.nvim_set_hl(0, 'bufline_focused_-_right_ss', { fg = focused_bg, bg = unfocused_bg })
   vim.api.nvim_set_hl(0, 'bufline_right_-_empty_ss', { fg = unfocused_bg, bg = fill_bg })

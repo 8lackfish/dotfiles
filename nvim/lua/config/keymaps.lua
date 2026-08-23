@@ -1,5 +1,4 @@
 local editor = {}
-editor.color = require 'editor.color'
 editor.session = require 'editor.session'
 
 -- load/save the session through the prompt
@@ -14,32 +13,6 @@ vim.keymap.set("n", "Qf", function() vim.diagnostic.setloclist(--[[cur buffer]])
 -- toggle tabline, only meaningful when showtabline is not 1
 vim.keymap.set("n", "<Leader>T", function()
   vim.o.showtabline = (vim.o.showtabline == 2 and 0) or (vim.o.showtabline == 0 and 2) or 1
-end)
-
--- inspect color codes in the current line
-vim.keymap.set("n", "<Leader>cc", function()
-  editor.color.inspect_line()
-end)
-
- -- stop inspecting color codes in the current line
-vim.keymap.set("n", "<Leader>cs", function()
-  editor.color.stop_inspect_line()
-end)
-
--- inspect color codes in the lines
-vim.keymap.set("v", "<Leader>cc", function()
-  local s, e = vim.fn.line("v"), vim.fn.line(".")
-  for i = s > e and e or s, s > e and s or e do
-    editor.color.inspect_line(0, i)
-  end
-end)
-
--- stop inspecting color codes in the lines
-vim.keymap.set("v", "<Leader>cs", function()
-  local s, e = vim.fn.line("v"), vim.fn.line(".")
-  for i = s > e and e or s, s > e and s or e do
-    editor.color.stop_inspect_line(0, i)
-  end
 end)
 
 -- select a Jupytext cell in Python file

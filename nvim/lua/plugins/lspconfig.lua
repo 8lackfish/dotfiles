@@ -1,6 +1,6 @@
 return {
   "neovim/nvim-lspconfig",
-  cmd = "LspStart",
+  event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     -- mason-lspconfig
     {

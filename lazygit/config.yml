@@ -19,6 +19,7 @@ gui:
       - ⠧
       - ⠇
       - ⠏
+    rate: 50
 customCommands:
   - key: "C"
     command: "git cz"

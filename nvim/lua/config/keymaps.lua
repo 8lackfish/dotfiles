@@ -84,6 +84,15 @@ if vim.env.TMUX then
   end)
 end
 
+-- treesitter
+vim.keymap.set("v", "<BS>", function()
+  vim.treesitter.select('child', 1)
+end)
+
+vim.keymap.set({ "n", "v" }, "<CR>", function()
+  vim.treesitter.select('parent', 1)
+end)
+
 -- exit term mode
 vim.keymap.set("t", "<c-\\><c-[>", "<c-\\><c-n>")
 

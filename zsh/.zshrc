@@ -1,7 +1,7 @@
 # Vars
 self="${${(%):-%N}:A:h}"
 export HISTFILE="$XDG_STATE_HOME/.zshhist"
-export SAVEHIST=100
+export SAVEHIST=1000
 export HISTSIZE=$SAVEHIST
 
 # Opts

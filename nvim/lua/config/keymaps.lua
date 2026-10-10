@@ -84,6 +84,17 @@ if vim.env.TMUX then
   end)
 end
 
+-- Yazi
+vim.keymap.set("n", "<Leader>Y", function()
+  vim.fn.jobstart({
+    "kitty",
+    "yazi",
+    vim.fn.getcwd(),
+  }, {
+    detach = true,
+  })
+end, { desc = "Open Yazi in current working directory" })
+
 -- treesitter
 vim.keymap.set("v", "<BS>", function()
   vim.treesitter.select('child', 1)

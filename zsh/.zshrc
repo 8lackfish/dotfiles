@@ -34,7 +34,7 @@ alias gp='git push'
 eval "$(starship init zsh)"
 
 # Fzf
-export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow"
+export FZF_DEFAULT_COMMAND="fd --type f --hidden"
 export FZF_DEFAULT_OPTS="
   --style=minimal
   --layout=reverse

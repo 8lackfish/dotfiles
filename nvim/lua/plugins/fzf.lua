@@ -14,8 +14,8 @@ return {
     {
       "<Leader>fj", function()
         local cmd = (vim.fn.executable("fd") == 1) -- fd|find
-        and "fd --type d --hidden --follow --exclude .git --exclude .jj"
-        or "find -L -type d \\( -name .git -o -name .jj \\) -prune -o -type d -print"
+        and "fd --type d --hidden --exclude .git --exclude .jj"
+        or "find -type d \\( -name .git -o -name .jj \\) -prune -o -type d -print"
 
         require("fzf-lua").files({
           fzf_args = "--no-multi",

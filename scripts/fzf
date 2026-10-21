@@ -2,7 +2,7 @@ __FZF__FDC_STASH=$FZF_DEFAULT_COMMAND
 __FZF__FDO_STASH=$FZF_DEFAULT_OPTS
 
 __fzf__jump() {
-    export FZF_DEFAULT_COMMAND="fd --type d --hidden --follow"
+    export FZF_DEFAULT_COMMAND="fd --type d --hidden"
     export FZF_DEFAULT_OPTS=$(echo "$__FZF__FDO_STASH" | sed 's/--multi//')
     __fzf__jump_dir=$(eval "$FZF_DEFAULT_COMMAND" | fzf)
     __fzf__jump_ec=$?
@@ -18,7 +18,7 @@ __fzf__jump_around_worktree() {
 
     __fzf__jaw_git_root=$(git rev-parse --show-toplevel)
 
-    export FZF_DEFAULT_COMMAND="fd --type d --hidden --follow"
+    export FZF_DEFAULT_COMMAND="fd --type d --hidden"
     export FZF_DEFAULT_OPTS=$(echo "$__FZF__FDO_STASH" | sed 's/--multi//')
     __fzf__jaw_dir=$(eval "$FZF_DEFAULT_COMMAND . \"$__fzf__jaw_git_root\"" \
       | sed "s|^$__fzf__jaw_git_root/||" \

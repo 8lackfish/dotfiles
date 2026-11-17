@@ -1,2 +1,3 @@
 .nvim_theme
 lazy-lock.json
+nvim/after/plugin/*.no_public.lua

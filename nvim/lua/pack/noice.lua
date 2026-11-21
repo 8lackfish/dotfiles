@@ -1,11 +1,11 @@
-return {
-  "folke/noice.nvim",
-  event = "VeryLazy",
-  dependencies = {
-    "MunifTanjim/nui.nvim",
-    -- "rcarriga/nvim-notify",
-  },
-  opts = {
+vim.schedule(function()
+  vim.pack.add({
+    "https://github.com/MunifTanjim/nui.nvim",
+    -- "https://github.com/rcarriga/nvim-notify",
+    "https://github.com/folke/noice.nvim"
+  })
+
+  require('noice').setup({
     -- routes
     routes = {
       {
@@ -82,5 +82,6 @@ return {
       signature = { enabled = false, },
       hover = { enabled = false, },
     },
-  },
-}
+  })
+
+end)

@@ -1,5 +1,2 @@
-require'config.options'
-require'config.theme'
-require'config.lazy'
-require'config.autocmds'
-require'config.keymaps'
+require'config'
+require'pack'

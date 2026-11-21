@@ -32,9 +32,6 @@ vim.keymap.set('n', '<Leader>jc', function()
 end
 )
 
--- Lazy manager
-vim.keymap.set("n", "<Leader>lz", "<Cmd>Lazy<CR>")
-
 -- half-page scroll
 vim.keymap.set({ "n", "v" }, "<m-j>", "<c-d>")
 vim.keymap.set({ "n", "v" }, "<m-k>", "<c-u>")

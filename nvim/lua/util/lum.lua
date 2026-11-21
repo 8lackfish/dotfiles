@@ -1,4 +1,1 @@
-return {
-  "8lackfish/lum.nvim",
-  lazy = false
-}
+vim.pack.add({ "https://github.com/8lackfish/lum.nvim" })

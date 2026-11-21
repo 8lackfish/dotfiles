@@ -1,25 +1,16 @@
-return {
-  "neovim/nvim-lspconfig",
-  event = { "BufReadPre", "BufNewFile" },
-  dependencies = {
-    -- mason-lspconfig
-    {
-      "williamboman/mason-lspconfig.nvim",
-      dependencies = {
-        -- mason
-        "williamboman/mason.nvim",
-        opts = {} -- ensure setup
+vim.api.nvim_create_autocmd({ 'BufReadPre', 'BufNewFile' }, {
+  once = true,
+  callback = function()
+    vim.pack.add({
+      {
+        src = "https://github.com/saghen/blink.cmp",
+        version = vim.version.range("1.*")
       },
-    },
-    -- blink.cmp
-    { "saghen/blink.cmp" },
-    -- lazydev
-    {
-      "folke/lazydev.nvim",
-      ft = "lua",
-    },
-  },
-  config = function()
+      "https://github.com/mason-org/mason.nvim",
+      "https://github.com/mason-org/mason-lspconfig.nvim",
+      "https://github.com/neovim/nvim-lspconfig",
+    })
+
     local capabilities = require('blink.cmp').get_lsp_capabilities()
 
     vim.lsp.config("clangd", {
@@ -56,5 +47,15 @@ return {
       ensure_installed = { "clangd", "rust_analyzer", "lua_ls" },
       automatic_enable = false
     }
-  end,
-}
+
+    vim.api.nvim_create_autocmd('FileType', {
+      pattern = 'lua',
+      once = true,
+      callback = function()
+        vim.pack.add({ "https://github.com/folke/lazydev.nvim" })
+        require('lazydev').setup()
+      end,
+    })
+
+  end
+})

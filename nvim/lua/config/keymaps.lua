@@ -116,3 +116,6 @@ vim.keymap.set("n", "<c-left>", "<c-w><")
 vim.keymap.set("n", "<c-right>", "<c-w>>")
 vim.keymap.set("n", "<c-up>", "<c-w>+")
 vim.keymap.set("n", "<c-down>", "<c-w>-")
+
+-- restart
+vim.keymap.set("n", "F5", vim.cmd.restart)

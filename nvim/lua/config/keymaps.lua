@@ -101,6 +101,13 @@ vim.keymap.set({ "n", "v" }, "<CR>", function()
   vim.treesitter.select('parent', 1)
 end)
 
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "qf",
+  callback = function(ev)
+    vim.keymap.set("n", "<CR>", "<CR>", { buffer = ev.buf, remap = false })
+  end,
+})
+
 -- exit term mode
 vim.keymap.set("t", "<c-\\><c-[>", "<c-\\><c-n>")
 

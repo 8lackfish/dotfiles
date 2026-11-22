@@ -5,8 +5,8 @@ editor.session = require 'editor.session'
 vim.keymap.set("n", "SS", function() editor.session.prompt() end)
 
 -- diagnostic
-vim.keymap.set("n", "<c-j>", function() vim.diagnostic.goto_next() end)
-vim.keymap.set("n", "<c-k>", function() vim.diagnostic.goto_prev() end)
+vim.keymap.set("n", "<c-j>", function() vim.diagnostic.jump({ count = 1, float = true }) end)
+vim.keymap.set("n", "<c-k>", function() vim.diagnostic.jump({ count = -1, float = true }) end)
 vim.keymap.set("n", "QF", function() vim.diagnostic.setqflist(--[[all buffers]]) end)
 vim.keymap.set("n", "Qf", function() vim.diagnostic.setloclist(--[[cur buffer]]) end)
 

@@ -85,7 +85,7 @@ vim.schedule(function()
           ,
           color = function()
             return {
-              fg = vim.lsp.buf_is_attached(0) and colors.diagnoster or nil
+              fg = #vim.lsp.get_clients({ bufnr = 0 }) > 0 and colors.diagnoster or nil
             }
           end
         },

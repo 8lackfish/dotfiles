@@ -8,6 +8,7 @@ vim.schedule(function()
     win_split_mode = 'vertical',
     org_log_done = false,
     org_log_repeat = false,
+    win_border = 'rounded',
 
     org_capture_templates = {
       t = {

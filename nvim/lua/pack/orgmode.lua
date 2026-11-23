@@ -6,7 +6,7 @@ vim.schedule(function()
     org_agenda_files = '~/orgfiles/**/*',
     org_default_notes_file = '~/orgfiles/refile.org',
     win_split_mode = 'vertical',
-    org_log_done = false,
+    org_log_done = nil,
     org_log_repeat = false,
     win_border = 'rounded',
 

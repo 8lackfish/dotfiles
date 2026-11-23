@@ -79,7 +79,16 @@ vim.schedule(function()
 
   if vim.tbl_contains(vim.v.argv, "orgmode") then -- nvim -- orgmode
     vim.schedule(function()
-      vim.cmd("Org agenda t")
+      local _, win = vim.lsp.util.open_floating_preview(
+        { "Org capture t?", "- [o]k", "- any: Org agenda t" },
+        "",
+        { border = 'rounded' }
+      )
+      vim.wo[win].winhighlight = "NormalFloat:Normal"
+      vim.cmd("redraw")
+      local k = vim.fn.getcharstr()
+      vim.api.nvim_win_close(win, true)
+      vim.cmd((k == "o" or k == "\r") and "Org capture t" or "Org agenda t")
     end)
   end
 

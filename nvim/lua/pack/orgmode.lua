@@ -22,12 +22,6 @@ vim.schedule(function()
       },
     },
 
-    mappings = {
-      capture = {
-        org_capture_kill = "<Leader>ock",
-      },
-    },
-
     org_todo_keywords = {
       "BACKLOG",
       "TODO",

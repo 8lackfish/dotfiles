@@ -4,12 +4,19 @@ add_newline = false
 
 format = "$hostname$directory$git_branch$git_commit$status\n$character"
 
+[hostname]
+format = '[$hostname]($style) '
+style = 'dimmed #9D6FC4'
+
 [directory]
 style = 'italic #7fbbb3'
 
 [git_branch]
 format = '[$symbol$branch(:$remote_branch)]($style) '
-style = 'fg:#a7c080'
+style = 'dimmed fg:#da7756'
+
+[git_commit]
+style = 'dimmed fg:#da7756'
 
 [status]
 disabled = false

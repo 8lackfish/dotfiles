@@ -2,7 +2,7 @@
 
 add_newline = false
 
-format = "$hostname$directory$git_branch$git_commit$shell$direnv$env_var\n$character"
+format = "$hostname$directory$git_branch$git_commit$status\n$character"
 
 [directory]
 style = 'italic #7fbbb3'
@@ -11,7 +11,12 @@ style = 'italic #7fbbb3'
 format = '[$symbol$branch(:$remote_branch)]($style) '
 style = 'fg:#a7c080'
 
+[status]
+disabled = false
+format = '[\($status\)]($style) '
+style = '#c51b1a'
+
 [character]
-success_symbol = '[❯](#bafb00) '
+success_symbol = '[❯](#7fbbb3) '
 error_symbol = '[](#c51b1a) '
-vimcmd_symbol = '[❮](#bafb00) '
+vimcmd_symbol = '[❮](#7fbbb3) '

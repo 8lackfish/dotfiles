@@ -37,3 +37,9 @@ vim.opt.wildoptions = 'tagfile'
 vim.opt.title = true
 vim.opt.ruler = false
 vim.opt.fillchars = { eob = ' ' }
+vim.opt.guicursor = {
+  "n-v-c-sm:block-blinkwait0-blinkon200-blinkoff200",
+  "i-ci-ve:ver25-blinkwait0-blinkon200-blinkoff200",
+  "r-cr-o:hor20-blinkwait0-blinkon200-blinkoff200",
+  "t:block-blinkwait0-blinkon200-blinkoff200-TermCursor",
+}
